@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "File Icon Changer": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
