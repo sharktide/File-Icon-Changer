@@ -2,18 +2,15 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "File Icon Changer"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.1.0"
 #define MyAppPublisher "Rihaan Meher"
-#define MyAppURL "https://github.com/sharktide/File-Icon-Changer"
+#define MyAppURL "https://github.com/sharktide/file-icon-changer"
 #define MyAppExeName "File Icon Changer.exe"
-#define MyAppAssocName "exe"
-#define MyAppAssocExt ""
-#define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{4390E18F-D821-4F4A-A802-D4F765967426}
+AppId={{EF5A9114-C4BE-42D6-ABE5-757952BA48E7}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -31,13 +28,12 @@ ArchitecturesAllowed=x64compatible
 ; meaning it should use the native 64-bit Program Files directory and
 ; the 64-bit view of the registry.
 ArchitecturesInstallIn64BitMode=x64compatible
-ChangesAssociations=yes
 DisableProgramGroupPage=yes
-LicenseFile=C:\Users\rihaan.meher\Downloads\Untitled.txt
+LicenseFile=C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\LICENSE.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
-OutputDir=C:\Users\rihaan.meher\Downloads\File_Icon_Changer_Output
-OutputBaseFilename=File_Icon_Changer_Winows_x64
+OutputDir=C:\Users\rihaan.meher\Downloads\file_output
+OutputBaseFilename=File_Icon_Changer_x64
 SolidCompression=yes
 WizardStyle=modern
 
@@ -48,18 +44,196 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\publish\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\publish\File Icon Changer.deps.json"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\publish\File Icon Changer.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\publish\File Icon Changer.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\publish\File Icon Changer.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\clretwrc.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\clrgc.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\clrgcexp.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\clrjit.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\coreclr.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\createdump.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\File Icon Changer.deps.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\File Icon Changer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\File Icon Changer.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\File Icon Changer.runtimeconfig.json"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\hostfxr.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\hostpolicy.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\Microsoft.CSharp.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\Microsoft.DiaSymReader.Native.amd64.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\Microsoft.VisualBasic.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\Microsoft.VisualBasic.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\Microsoft.Win32.Primitives.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\Microsoft.Win32.Registry.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\mscordaccore.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\mscordaccore_amd64_amd64_9.0.124.61010.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\mscordbi.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\mscorlib.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\mscorrc.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\msquic.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\netstandard.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.AppContext.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Buffers.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Collections.Concurrent.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Collections.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Collections.Immutable.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Collections.NonGeneric.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Collections.Specialized.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ComponentModel.Annotations.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ComponentModel.DataAnnotations.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ComponentModel.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ComponentModel.EventBasedAsync.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ComponentModel.Primitives.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ComponentModel.TypeConverter.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Configuration.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Console.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Core.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Data.Common.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Data.DataSetExtensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Data.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.Contracts.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.Debug.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.DiagnosticSource.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.FileVersionInfo.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.Process.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.StackTrace.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.TextWriterTraceListener.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.Tools.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.TraceSource.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Diagnostics.Tracing.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Drawing.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Drawing.Primitives.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Dynamic.Runtime.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Formats.Asn1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Formats.Tar.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Globalization.Calendars.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Globalization.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Globalization.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.Compression.Brotli.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.Compression.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.Compression.FileSystem.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.Compression.Native.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.Compression.ZipFile.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.FileSystem.AccessControl.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.FileSystem.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.FileSystem.DriveInfo.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.FileSystem.Primitives.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.FileSystem.Watcher.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.IsolatedStorage.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.MemoryMappedFiles.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.Pipelines.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.Pipes.AccessControl.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.Pipes.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.IO.UnmanagedMemoryStream.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Linq.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Linq.Expressions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Linq.Parallel.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Linq.Queryable.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Memory.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Http.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Http.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.HttpListener.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Mail.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.NameResolution.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.NetworkInformation.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Ping.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Primitives.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Quic.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Requests.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Security.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.ServicePoint.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.Sockets.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.WebClient.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.WebHeaderCollection.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.WebProxy.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.WebSockets.Client.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Net.WebSockets.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Numerics.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Numerics.Vectors.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ObjectModel.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Private.CoreLib.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Private.DataContractSerialization.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Private.Uri.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Private.Xml.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Private.Xml.Linq.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.DispatchProxy.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.Emit.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.Emit.ILGeneration.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.Emit.Lightweight.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.Metadata.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.Primitives.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Reflection.TypeExtensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Resources.Reader.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Resources.ResourceManager.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Resources.Writer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.CompilerServices.Unsafe.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.CompilerServices.VisualC.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Handles.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.InteropServices.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.InteropServices.JavaScript.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.InteropServices.RuntimeInformation.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Intrinsics.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Loader.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Numerics.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Serialization.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Serialization.Formatters.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Serialization.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Serialization.Primitives.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Runtime.Serialization.Xml.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.AccessControl.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Claims.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Cryptography.Algorithms.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Cryptography.Cng.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Cryptography.Csp.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Cryptography.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Cryptography.Encoding.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Cryptography.OpenSsl.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Cryptography.Primitives.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Cryptography.X509Certificates.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Principal.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.Principal.Windows.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Security.SecureString.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ServiceModel.Web.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ServiceProcess.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Text.Encoding.CodePages.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Text.Encoding.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Text.Encoding.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Text.Encodings.Web.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Text.Json.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Text.RegularExpressions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.Channels.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.Overlapped.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.Tasks.Dataflow.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.Tasks.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.Tasks.Extensions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.Tasks.Parallel.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.Thread.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.ThreadPool.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Threading.Timer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Transactions.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Transactions.Local.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.ValueTuple.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Web.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Web.HttpUtility.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Windows.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.Linq.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.ReaderWriter.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.Serialization.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.XDocument.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.XmlDocument.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.XmlSerializer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.XPath.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\System.Xml.XPath.XDocument.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\rihaan.meher\Documents\Visual Studio\File_Icon_Changer\File Icon Changer\File Icon Changer\bin\Release\net9.0\win-x64\publish\WindowsBase.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
-
-[Registry]
-Root: HKA; Subkey: "Software\Classes\{#MyAppAssocExt}\OpenWithProgids"; ValueType: string; ValueName: "{#MyAppAssocKey}"; ValueData: ""; Flags: uninsdeletevalue
-Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; ValueName: ""; ValueData: "{#MyAppAssocName}"; Flags: uninsdeletekey
-Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
-Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
