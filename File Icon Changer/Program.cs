@@ -9,7 +9,7 @@ public class FileIconChanger
     {
         try
         {
-            // Check if the file extension registry key exists
+            // Open or create the file extension registry key
             using (RegistryKey extensionKey = Registry.ClassesRoot.OpenSubKey(fileExtension, true) ?? Registry.ClassesRoot.CreateSubKey(fileExtension))
             {
                 if (extensionKey == null)
@@ -18,16 +18,12 @@ public class FileIconChanger
                     return;
                 }
 
-                // Retrieve or set the ProgID for the file extension
-                string progId = extensionKey.GetValue(string.Empty)?.ToString();
-                if (string.IsNullOrEmpty(progId))
-                {
-                    progId = $"{fileExtension.Trim('.')}_file"; // Default ProgID if none exists
-                    extensionKey.SetValue(string.Empty, progId);
-                }
+                // Force association with a custom ProgID
+                string progId = $"{fileExtension.Trim('.')}_customFile";
+                extensionKey.SetValue(string.Empty, progId); // Override any existing ProgID
 
                 // Open or create the ProgID registry key
-                using (RegistryKey progIdKey = Registry.ClassesRoot.CreateSubKey(progId))
+                using (RegistryKey progIdKey = Registry.ClassesRoot.OpenSubKey(progId, true) ?? Registry.ClassesRoot.CreateSubKey(progId))
                 {
                     if (progIdKey == null)
                     {
@@ -35,8 +31,8 @@ public class FileIconChanger
                         return;
                     }
 
-                    // Set the DefaultIcon subkey for the ProgID
-                    using (RegistryKey defaultIconKey = progIdKey.CreateSubKey("DefaultIcon"))
+                    // Open or create the DefaultIcon subkey for the ProgID
+                    using (RegistryKey defaultIconKey = progIdKey.OpenSubKey("DefaultIcon", true) ?? progIdKey.CreateSubKey("DefaultIcon"))
                     {
                         if (defaultIconKey == null)
                         {
@@ -44,12 +40,49 @@ public class FileIconChanger
                             return;
                         }
 
-                        defaultIconKey.SetValue(string.Empty, iconPath); // Set the icon path
+                        // Set or overwrite the icon path
+                        defaultIconKey.SetValue(string.Empty, iconPath);
                     }
                 }
             }
 
+            // Restart Explorer to apply changes
             Console.WriteLine($"Successfully changed icon for {fileExtension} to {iconPath}");
+            Console.WriteLine("Restarting Windows Explorer...");
+            System.Diagnostics.Process.Start("cmd.exe", "/C taskkill /f /im explorer.exe && start explorer.exe");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+
+    public static void DeleteFileIcon(string fileExtension)
+    {
+        try
+        {
+            using (RegistryKey extensionKey = Registry.ClassesRoot.OpenSubKey(fileExtension, true))
+            {
+                if (extensionKey == null)
+                {
+                    Console.WriteLine($"Error: Registry key for {fileExtension} not found");
+                    return;
+                }
+
+                string progId = extensionKey.GetValue(string.Empty)?.ToString();
+                if (!string.IsNullOrEmpty(progId))
+                {
+                    using (RegistryKey progIdKey = Registry.ClassesRoot.OpenSubKey(progId, true))
+                    {
+                        if (progIdKey != null)
+                        {
+                            progIdKey.DeleteSubKey("DefaultIcon", false);
+                            Console.WriteLine($"Successfully deleted custom icon for {fileExtension}");
+                        }
+                    }
+                }
+            }
         }
         catch (Exception ex)
         {
@@ -59,23 +92,33 @@ public class FileIconChanger
 
     public static void Main(string[] args)
     {
+        Console.WriteLine("Make sure this application has been run as an adminstrator. If not, you will see a permission denied error later.");
         Console.Write("File extension: ");
         string fileExtension = Console.ReadLine();
-        if (fileExtension == null)
+        if (fileExtension == null || fileExtension == "")
         {
             Console.WriteLine("Error: File Extension is null");
         }
         else
         {
-            Console.Write("Path to icon: ");
-            string iconPath = Console.ReadLine();
-            if (iconPath == null)
+            Console.WriteLine("Delete file icon or Create file icon? (d/c)");
+            string go = Console.ReadLine();
+            if (go == "c")
             {
-                Console.WriteLine("Error: Path to icon is null");
+                Console.Write("Path to icon: ");
+                string iconPath = Console.ReadLine();
+                if (iconPath == null)
+                {
+                    Console.WriteLine("Error: Path to icon is null");
+                }
+                else
+                {
+                    ChangeFileIcon(fileExtension, iconPath);
+                }
             }
-            else
+            else if (go == "d")
             {
-                ChangeFileIcon(fileExtension, iconPath);
+                DeleteFileIcon(fileExtension);
             }
         }
         Console.WriteLine("Press any key to exit...");
@@ -99,4 +142,4 @@ you may not use this file except in compliance with the License.
    See the License for the specific language governing permissions and
    limitations under the License.
 
-*/
+ */
